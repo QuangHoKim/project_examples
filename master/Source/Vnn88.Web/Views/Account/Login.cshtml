@@ -1,0 +1,62 @@
+﻿@using Vnn88.Common.Infrastructure
+@using Vnn88.Common.Resources
+@model Vnn88.DataModel.LoginModel
+@{
+    ViewData[Constants.PageTitle] = CommonResource.titLogin;
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+@{ await Html.RenderPartialAsync("_MetaHead");}
+
+<body id="login-page">
+    <div class="wrapper wrapper-full-page">
+        <div class="page-header login-page header-filter" filter-color="black" data-image="../../img/login.jpg">
+            <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+                        <form method="post" asp-route-returnurl="@Model.ReturnUrl" id="LoginValidation">
+                            <div class="card card-login card-hidden">
+                                <div class="card-header card-header-info text-center">
+                                    <h4 class="card-title">@CommonResource.Aministrator</h4>
+                                </div>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="card-body ">
+                                    <span class="bmd-form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">face</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" asp-for="UserName" class="form-control" required="true" placeholder="@CommonResource.lblUserName">
+                                        </div>
+                                    </span>
+                                    <span class="bmd-form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">lock_outline</i>
+                                                </span>
+                                            </div>
+                                            <input type="password" asp-for="Pass" class="form-control" required="true" placeholder="@CommonResource.lblPassword">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="card-footer justify-content-center">
+                                    <button type="submit" class="btn btn-info btn-simple btn-wd btn-lg">@CommonResource.Login</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @{ await Html.RenderPartialAsync("_Scripts");}
+
+</body>
+</html>

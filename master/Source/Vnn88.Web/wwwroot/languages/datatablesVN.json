@@ -1,0 +1,17 @@
+﻿{
+  "sProcessing": "Đang xử lý...",
+  "sLengthMenu": "Xem _MENU_ dòng",
+  "sZeroRecords": "Không hiển thị ra kết quả, vì điều kiện tìm kiếm chưa hợp lệ",
+  "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng trên tổng số _PAGES_ trang",
+  "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 dòng",
+  "sInfoFiltered": "(được lọc từ _MAX_ dòng)",
+  "sInfoPostFix": "",
+  "sSearch": "Tìm:",
+  "sUrl": "",
+  "oPaginate": {
+    "sFirst": "Đầu",
+    "sPrevious": "Trước",
+    "sNext": "Tiếp",
+    "sLast": "Cuối"
+  }
+}

@@ -1,0 +1,7 @@
+﻿@using Microsoft.Extensions.Configuration
+@using Vnn88.Common.Infrastructure
+@inject IConfiguration Configuration
+
+<script src="~/js/plugin-dist.js?v=@(Configuration[Constants.CacheBuster])"></script>
+<script src="~/js/script-dist.js?v=@(Configuration[Constants.CacheBuster])"></script>
+@Html.Partial("_Notification")

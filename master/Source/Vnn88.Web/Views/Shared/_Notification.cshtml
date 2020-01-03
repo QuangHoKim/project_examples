@@ -1,0 +1,16 @@
+﻿@using Vnn88.Common.Infrastructure
+@{
+    string notifyKey = nameof(NotifyMessage);
+}
+@if (TempData.ContainsKey(notifyKey))
+{
+    var notification = TempData.Get<NotifyMessage>(notifyKey);
+    if (notification != null)
+    {
+        <script>
+            $(document).ready(function() {
+                @Html.Raw($"toastr.{notification.NotifyType.ToString().ToLower()}('{notification.Message}');")
+            })
+        </script>
+    }
+}

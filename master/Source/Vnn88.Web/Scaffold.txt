@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=localhost;Database=fps.webv1;User Id=postgres;Password=12345;Port=5432;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force

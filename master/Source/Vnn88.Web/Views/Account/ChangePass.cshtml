@@ -1,0 +1,36 @@
+﻿@using Vnn88.Common.Infrastructure
+@using Vnn88.Common.Resources
+@model Vnn88.DataModel.ChangePasswordModel
+@{
+    ViewData[Constants.PageTitle] = CommonResource.titChangePass;
+}
+
+<!DOCTYPE html>
+<html class="full-height">
+<body id="login-page" class="hold-transition skin-blue sidebar-mini center-container">
+    <div class="container center-element">
+        <div class="main-content">
+            <div class="page-body">
+                <form id="changepass-form" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id"/>
+                    <div class="form-group">
+                        <input asp-for="Password" type="password" class="input form-control" placeholder="@CommonResource.lblPassword">
+                        <i class="icon ion-ios-unlocked-outline"></i>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input asp-for="ConfirmPassword" type="password" class="input form-control" placeholder="@CommonResource.lblPasswordConfirm">
+                        <i class="icon ion-ios-unlocked-outline"></i>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-login btn-block">@CommonResource.titChangePass</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

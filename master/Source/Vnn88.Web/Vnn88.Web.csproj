@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>1cdfabd5-eab5-4d6f-b89a-c33b2965188a</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="ViewComponents\**" />
+    <Compile Remove="Views\Monitoring\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="ViewComponents\**" />
+    <Content Remove="Views\Monitoring\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="ViewComponents\**" />
+    <EmbeddedResource Remove="Views\Monitoring\**" />
+    <None Remove="logs\**" />
+    <None Remove="ViewComponents\**" />
+    <None Remove="Views\Monitoring\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infrastructure\Mapper\EventLogMapping.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\Azure Publish.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Remove="Properties\PublishProfiles\primesecurity - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\primesecuritytest - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\FPSW - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\FPSWtest - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\FPSWWeb - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\FPSWWebHtml - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\FPSWWebTest - Web Deploy.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Authorization\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\fonts\google\-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\-L14Jk06m6pUHB-5mXQQnRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\0eC6fl06luXEYWpBSJvXCBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2" />
+    <None Include="wwwroot\fonts\google\77FXFjRbGzN4aCrSFhlh3hJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\CWB0XYA8bzo0kSThX0UTuA.woff2" />
+    <None Include="wwwroot\fonts\google\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2" />
+    <None Include="wwwroot\fonts\google\ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\Fl4y0QdOxyyTHEGMXX8kcRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2" />
+    <None Include="wwwroot\fonts\google\I3S1wsgSg9YCurV6PUkTORJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\mbmhprMH69Zi6eEPBYVFhRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\mx9Uck6uB63VIKFYnEMXrRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\NYDWBdD4gIq26G5XYbHsFBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\oHi30kwQWvpCWqAhzHcCSBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\oOeFwZNlrTefzLYmlVV1UBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\Pru33qjShpZSmG3z6VYwnRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\rGvHdJnr2l75qb0YND9NyBJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2" />
+    <None Include="wwwroot\fonts\google\u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2" />
+    <None Include="wwwroot\fonts\google\UX6i4JxQDm3fVTc1CPuwqhJtnKITppOI_IvcXXDNrsc.woff2" />
+    <None Include="wwwroot\fonts\google\ZLqKeelYbATG60EpZBSDyxJtnKITppOI_IvcXXDNrsc.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vnn88.Common\Vnn88.Common.csproj" />
+    <ProjectReference Include="..\Vnn88.DataModel\Vnn88.DataModel.csproj" />
+    <ProjectReference Include="..\Vnn88.Service\Vnn88.Service.csproj" />
+  </ItemGroup>
+
+</Project>

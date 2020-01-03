@@ -1,0 +1,36 @@
+﻿@using System.Threading
+@using Microsoft.Extensions.Configuration
+@using Vnn88.Common.Infrastructure
+@using Vnn88.Common.Resources
+<!DOCTYPE html>
+@inject IConfiguration Configuration;
+<html lang="@Thread.CurrentThread.CurrentCulture.Name" data-date-format="@Html.Raw(Configuration[Constants.DateClientFortmat + ":" + Thread.CurrentThread.CurrentCulture.Name])" class="perfect-scrollbar-on">
+@await Html.PartialAsync("_MetaHead")
+
+<body>
+    <div class="wrapper">
+        @await Html.PartialAsync("_MainSidebar")
+        <div class="main-panel">
+            @RenderSection("ContentHeader", false)
+            @await Html.PartialAsync("_MainHeader")
+            @RenderBody()
+            @await Html.PartialAsync("_MainFooter")
+        </div>
+    </div>
+    <div class="modal fade" id="form-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="replace-target"></div>
+            </div>
+        </div>
+    </div>
+    <div id="system-error" style="display: none;">@MessageResource.SystemError</div>
+    @await Html.PartialAsync("_Scripts")
+    @RenderSection("Scripts", false)
+    <div class="ajax-overlay">
+        <div class="backdrop">
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+</html>
